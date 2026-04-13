@@ -1312,8 +1312,16 @@ width: 60px;
     /* Styling khusus untuk layar HP (lebar di bawah 768px) */
 @media screen and (max-width: 768px) {
 
+    header {
+        flex-direction: column !important; /* Logo di atas, menu di bawahnya */
+        height: auto !important;
+        padding: 10px !important;
+    }
+    
     header nav {
-        gap: 10px; /* Kecilin jarak antar menu utama */
+        justify-content: center !important;
+        width: 100% !important;
+        margin-top: 10px !important;
     }
     
     header nav a {
@@ -1326,6 +1334,12 @@ width: 60px;
         gap: 20px;
     }
 
+    .menu-main-container {
+        width: 100% !important;
+        padding: 0 10px !important;
+        overflow-x: hidden !important; /* Biar bodi web gak goyang kanan kiri */
+    }
+    
     /* 2. Menu List dan Galeri jadi lebar penuh */
     .menu-list-side, .menu-gallery-side {
         flex: 1;
@@ -1375,14 +1389,21 @@ width: 60px;
         scrollbar-width: none; /* Sembunyiin scrollbar di Firefox */
     }
 
-    .category-nav::-webkit-scrollbar {
-        display: none; /* Sembunyiin scrollbar di Chrome/Safari biar clean */
-    }
+     .category-nav {
+        display: flex !important;
+        flex-wrap: nowrap !important; /* WAJIB: biar gak turun ke bawah */
+        overflow-x: auto !important; /* WAJIB: biar bisa scroll */
+        width: 100vw !important; /* Paksa selebar layar HP */
+        margin-left: -10px !important; /* Offset padding container biar full screen */
+        padding: 10px !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory; /* Biar scrollnya "nge-lock" pas berhenti */
+     }
 
-    .category-nav a {
-        flex: 0 0 auto !important; /* Biar ukuran tombol gak mengkerut */
-        padding: 6px 15px;
-        font-size: 14px;
+     .category-nav a {
+        flex: 0 0 auto !important; /* BIAR GAK MENGKERUT (Ini kuncinya) */
+        margin-right: 10px !important;
+        scroll-snap-align: start;
     }
 }
     
