@@ -6,6 +6,8 @@
     <title>Calf Coffee | Everyday is Calf Day</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 </head>
 <body>
 
@@ -316,6 +318,49 @@ footer {
     background: #1a1a1a;
     color: #555;
     font-size: 0.8rem;
+}
+
+
+    /* Styling khusus untuk layar HP (lebar di bawah 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Paksa Container Kategori jadi tumpuk ke bawah */
+    .category-content-wrapper {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    /* 2. Menu List dan Galeri jadi lebar penuh */
+    .menu-list-side, .menu-gallery-side {
+        flex: 1;
+        width: 100%;
+        padding-right: 0; /* Hapus jarak samping yang tadi kita buat */
+    }
+
+    /* 3. Atur ukuran teks biar gak kegedean */
+    .menu-item-row h4 {
+        font-size: 1.1rem;
+    }
+
+    .item-info p {
+        font-size: 0.8rem;
+    }
+
+    /* 4. Galeri Foto: Bikin jadi 2 kolom aja biar gak kekecilan */
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+
+    /* 5. Sub-nav: Biar bisa di-scroll ke samping kalau menunya banyak */
+    .category-nav {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch; /* Biar scroll-nya mulus di iPhone */
+    }
 }
 </style>
 
