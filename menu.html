@@ -1329,29 +1329,28 @@ width: 60px;
     /* 2. Subnav (PENTING): Gue satuin kodenya biar gak bentrok */
     .category-nav {
         display: flex !important;
-        flex-wrap: nowrap !important;
+        /* Ini kuncinya: paksa mulai dari kiri, jangan di tengah */
+        justify-content: flex-start !important; 
         overflow-x: auto !important;
-        width: 100% !important;
-        /* HAPUS margin-left minus yang tadi */
-        margin-left: 0 !important; 
-        /* Pakai padding buat jaga jarak aman dari pinggir layar */
-        padding: 10px 15px !important; 
+        flex-wrap: nowrap !important;
+        
+        /* Jaga jarak aman */
+        padding: 15px !important;
+        margin: 0 !important;
         gap: 12px !important;
-        box-sizing: border-box !important;
-        -webkit-overflow-scrolling: touch !important;
-        /* Tambahin ini biar dia gak 'nyangkut' di kiri pas baru buka */
-        scroll-padding-left: 15px; 
+        
+        /* Hilangkan scrollbar biar estetik */
+        scrollbar-width: none; 
+        -webkit-overflow-scrolling: touch;
     }
     
     .category-nav::-webkit-scrollbar { display: none; }
 
     .category-nav a {
+        /* Biar tombolnya gak gepeng kena press layar HP */
         flex: 0 0 auto !important;
-        /* Biar teks gak mepet banget sama background biru tombolnya */
-        padding: 8px 16px !important;
-        display: inline-block !important;
     }
-
+    
     /* 3. Baris Menu: Ini biar harga gak kepotong ke kanan */
     .menu-item-row {
         display: flex !important;
