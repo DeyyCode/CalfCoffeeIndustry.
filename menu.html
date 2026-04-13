@@ -1329,21 +1329,27 @@ width: 60px;
     /* 2. Subnav (PENTING): Gue satuin kodenya biar gak bentrok */
     .category-nav {
         display: flex !important;
-        flex-wrap: nowrap !important; 
-        overflow-x: auto !important; 
-        width: 100% !important; /* Pake 100% aja biar gak nendang layar */
-        padding: 15px 5px !important;
-        gap: 10px !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        width: 100% !important;
+        /* HAPUS margin-left minus yang tadi */
+        margin-left: 0 !important; 
+        /* Pakai padding buat jaga jarak aman dari pinggir layar */
+        padding: 10px 15px !important; 
+        gap: 12px !important;
+        box-sizing: border-box !important;
         -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none; 
+        /* Tambahin ini biar dia gak 'nyangkut' di kiri pas baru buka */
+        scroll-padding-left: 15px; 
     }
     
     .category-nav::-webkit-scrollbar { display: none; }
 
     .category-nav a {
-        flex: 0 0 auto !important; /* Kunci biar gak gepeng */
-        padding: 8px 15px !important;
-        font-size: 13px !important;
+        flex: 0 0 auto !important;
+        /* Biar teks gak mepet banget sama background biru tombolnya */
+        padding: 8px 16px !important;
+        display: inline-block !important;
     }
 
     /* 3. Baris Menu: Ini biar harga gak kepotong ke kanan */
