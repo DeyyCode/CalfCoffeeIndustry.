@@ -1311,100 +1311,81 @@ width: 60px;
 
     /* Styling khusus untuk layar HP (lebar di bawah 768px) */
 @media screen and (max-width: 768px) {
-
+    /* 1. Header & Nav Atas: Biar gak numpuk */
     header {
-        flex-direction: column !important; /* Logo di atas, menu di bawahnya */
+        flex-direction: column !important;
         height: auto !important;
         padding: 10px !important;
+        align-items: center !important;
     }
     
     header nav {
+        margin-top: 15px !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important; /* Biar menu home/menu/find us gak nabrak layar */
         justify-content: center !important;
-        width: 100% !important;
-        margin-top: 10px !important;
-    }
-    
-    header nav a {
-        font-size: 13px;
-    }
-    
-    /* 1. Paksa Container Kategori jadi tumpuk ke bawah */
-    .category-content-wrapper {
-        flex-direction: column !important;
-        gap: 20px;
     }
 
-    .menu-main-container {
-        width: 100% !important;
-        padding: 0 10px !important;
-        overflow-x: hidden !important; /* Biar bodi web gak goyang kanan kiri */
+    /* 2. Subnav (PENTING): Gue satuin kodenya biar gak bentrok */
+    .category-nav {
+        display: flex !important;
+        flex-wrap: nowrap !important; 
+        overflow-x: auto !important; 
+        width: 100% !important; /* Pake 100% aja biar gak nendang layar */
+        padding: 15px 5px !important;
+        gap: 10px !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none; 
     }
     
-    /* 2. Menu List dan Galeri jadi lebar penuh */
-    .menu-list-side, .menu-gallery-side {
-        flex: 1;
-        width: 100%;
-        padding-right: 0; /* Hapus jarak samping yang tadi kita buat */
+    .category-nav::-webkit-scrollbar { display: none; }
+
+    .category-nav a {
+        flex: 0 0 auto !important; /* Kunci biar gak gepeng */
+        padding: 8px 15px !important;
+        font-size: 13px !important;
     }
 
-    .menu-header-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 12px; /* Kecilin font heading harga */
-    }
-
+    /* 3. Baris Menu: Ini biar harga gak kepotong ke kanan */
     .menu-item-row {
-        gap: 10px;
-    }
-    
-    /* 3. Atur ukuran teks biar gak kegedean */
-    .menu-item-row h4 {
-        font-size: 1.1rem;
+        display: flex !important;
+        flex-direction: row !important; /* Tetap satu baris */
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        gap: 5px !important;
     }
 
-    .item-info p {
-        font-size: 0.8rem;
+    .item-info {
+        flex: 1 !important; /* Ambil ruang sisa */
+        max-width: 60% !important; /* Biar gak nabrak kolom harga */
     }
 
     .item-prices {
-        min-width: 100px; /* Kasih ruang pasti buat harga */
-        gap: 15px;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        gap: 12px !important; /* Kecilin jarak antar harga Cup/Can/Liter */
+        justify-content: flex-end !important;
+        font-size: 13px !important;
     }
-    
-    /* 4. Galeri Foto: Bikin jadi 2 kolom aja biar gak kekecilan */
+
+    /* 4. Teks & Judul */
+    .category-block h3 {
+        font-size: 1.5rem !important;
+        margin-top: 20px !important;
+    }
+
+    .menu-header-row {
+        font-size: 11px !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* 5. Galeri Foto */
     .photo-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px;
+        gap: 8px !important;
     }
-
-     .category-nav {
-        display: flex !important;
-        overflow-x: auto !important; /* Kuncinya di sini biar bisa scroll samping */
-        white-space: nowrap !important; /* Biar menu gak turun ke bawah */
-        gap: 10px;
-        padding: 10px 5px;
-        -webkit-overflow-scrolling: touch; /* Biar scroll-nya licin di iPhone */
-        border-bottom: 1px solid #ddd;
-        scrollbar-width: none; /* Sembunyiin scrollbar di Firefox */
-    }
-
-     .category-nav {
-        display: flex !important;
-        flex-wrap: nowrap !important; /* WAJIB: biar gak turun ke bawah */
-        overflow-x: auto !important; /* WAJIB: biar bisa scroll */
-        width: 100vw !important; /* Paksa selebar layar HP */
-        margin-left: -10px !important; /* Offset padding container biar full screen */
-        padding: 10px !important;
-        -webkit-overflow-scrolling: touch !important;
-        scroll-snap-type: x mandatory; /* Biar scrollnya "nge-lock" pas berhenti */
-     }
-
-     .category-nav a {
-        flex: 0 0 auto !important; /* BIAR GAK MENGKERUT (Ini kuncinya) */
-        margin-right: 10px !important;
-        scroll-snap-align: start;
-    }
-}
+                                      }
+    
     
 </style>
