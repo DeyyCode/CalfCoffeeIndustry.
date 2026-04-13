@@ -1311,6 +1311,14 @@ width: 60px;
 
     /* Styling khusus untuk layar HP (lebar di bawah 768px) */
 @media screen and (max-width: 768px) {
+
+    header nav {
+        gap: 10px; /* Kecilin jarak antar menu utama */
+    }
+    
+    header nav a {
+        font-size: 13px;
+    }
     
     /* 1. Paksa Container Kategori jadi tumpuk ke bawah */
     .category-content-wrapper {
@@ -1325,6 +1333,17 @@ width: 60px;
         padding-right: 0; /* Hapus jarak samping yang tadi kita buat */
     }
 
+    .menu-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px; /* Kecilin font heading harga */
+    }
+
+    .menu-item-row {
+        gap: 10px;
+    }
+    
     /* 3. Atur ukuran teks biar gak kegedean */
     .menu-item-row h4 {
         font-size: 1.1rem;
@@ -1334,20 +1353,36 @@ width: 60px;
         font-size: 0.8rem;
     }
 
+    .item-prices {
+        min-width: 100px; /* Kasih ruang pasti buat harga */
+        gap: 15px;
+    }
+    
     /* 4. Galeri Foto: Bikin jadi 2 kolom aja biar gak kekecilan */
     .photo-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px;
     }
 
-    /* 5. Sub-nav: Biar bisa di-scroll ke samping kalau menunya banyak */
-    .category-nav {
+     .category-nav {
         display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 10px;
+        overflow-x: auto; /* Kuncinya di sini biar bisa scroll samping */
+        white-space: nowrap; /* Biar menu gak turun ke bawah */
         gap: 10px;
-        -webkit-overflow-scrolling: touch; /* Biar scroll-nya mulus di iPhone */
+        padding: 10px 5px;
+        -webkit-overflow-scrolling: touch; /* Biar scroll-nya licin di iPhone */
+        border-bottom: 1px solid #ddd;
+        scrollbar-width: none; /* Sembunyiin scrollbar di Firefox */
+    }
+
+    .category-nav::-webkit-scrollbar {
+        display: none; /* Sembunyiin scrollbar di Chrome/Safari biar clean */
+    }
+
+    .category-nav a {
+        flex: 0 0 auto; /* Biar ukuran tombol gak mengkerut */
+        padding: 6px 15px;
+        font-size: 14px;
     }
 }
     
