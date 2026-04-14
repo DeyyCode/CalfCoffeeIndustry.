@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 </head>
 <body>
@@ -64,13 +65,23 @@
     <section class="info-section" id="location">
         <div class="info-content">
             <div class="info-box">
-                <h3>CALF COFFEE INDUSTRY</h3>
-                <p><strong>Open:</strong> 07.00 - 23.00 WIB</p>
-                <div class="facilities">
-                    <span>Fast Wifi</span>
-                    <span>Indoor AC</span>
-                </div>
-            </div>
+    <h3>CALF COFFEE INDUSTRY</h3>
+    <p><strong>Open:</strong> 07.00 - 23.00 WIB</p>
+    
+    <div class="facilities">
+        <span>Fast Wifi</span>
+        <span>Indoor AC</span>
+    </div>
+
+    <div class="social-contact">
+        <a href="https://www.instagram.com/kopicalf?igsh=YnFmMnRnYzZzZ2F5" target="_blank">
+            <i class="fab fa-instagram"></i> @kopicalf
+        </a>
+        <a href="https://wa.me/62xxxxxxxxxxx" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+    </div>
+</div>
         </div>
     </section>
 
@@ -351,6 +362,33 @@ body {
     font-weight: 600 !important;
 }
 
+    .social-contact {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.social-contact a {
+    text-decoration: none;
+    color: #d4a373; /* Warna emas senada header */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-contact a i {
+    font-size: 1.4rem; /* Ikon dibikin agak gede dikit */
+}
+
+.social-contact a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+    
 /* 3. Footer Beneran di Bawah & Rapih */
 footer {
     background: #111111 !important;
@@ -361,6 +399,8 @@ footer {
     font-size: 0.8rem !important;
     width: 100% !important;
 }
+
+    
     /* Styling khusus untuk layar HP (lebar di bawah 768px) */
 @media screen and (max-width: 768px) {
 
