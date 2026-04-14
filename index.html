@@ -46,12 +46,12 @@
                 <p>Iced coffee, brown sugar, fresh milk</p>
             </div>
             <div class="menu-card">
-                <img src="img/magic-cheese-cream" alt="Magic Cheese Butter Cream">
+                <img src="img/magic-cheese-cream.jpg" alt="Magic Cheese Butter Cream">
                 <h3>Magic Cheese Butter Cream</h3>
                 <p>Light iced coffee with butter cream</p>
             </div>
             <div class="menu-card">
-                <img src="chicken-rice-mushroom-truffle" alt="Chicken Rice Mushroom Truffle">
+                <img src="chicken-rice-mushroom-truffle.jpg" alt="Chicken Rice Mushroom Truffle">
                 <h3>Chicken Rice Mushroom Truffle</h3>
                 <p>Crispy chicken with creamy garlic sauce, egg & rice</p>
             </div>
@@ -229,13 +229,12 @@ body {
 
 .menu-card {
     background: #fff;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    position: relative; /* Biar badge 'Best Seller' bisa nempel */
-    overflow: hidden;
+    width: 100%; /* Pastiin lebarnya menuhin container */
+    box-sizing: border-box;
 }
 
     .menu-card h3 {
@@ -256,13 +255,20 @@ body {
 }
 
 .menu-card img {
-    width: 100%;
-    height: 250px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8px;
+    .menu-card img {
+    width: 100% !important;
+    /* Ini perintah wajib buat bikin kotak sempurna */
+    aspect-ratio: 1 / 1 !important; 
+    
+    /* Biar gambarnya gak gepeng/ketarik */
+    object-fit: cover !important; 
+    object-position: center !important;
+
+    border-radius: 12px;
     margin-bottom: 15px;
+    
+    /* Tambahan buat jaga-jaga kalau browser jadul */
+    height: auto;
 }
 
 .badge {
