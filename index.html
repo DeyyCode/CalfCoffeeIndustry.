@@ -210,9 +210,9 @@ body {
 
 /* Menu Section */
 .menu-section {
-    padding: 60px 20px !important;
-    text-align: center !important;
-    display: block !important;
+    display: block !important; 
+    text-align: center !important; /* Biar judul & tombol otomatis ke tengah */
+    padding: 50px 20px !important;
 }
 
 .section-title {
@@ -224,11 +224,11 @@ body {
 
 .menu-container {
     display: flex !important;
-    flex-direction: row !important; /* Paksa kartu ke samping */
+    flex-direction: row !important; /* Paksa kartu sejajar horizontal */
     flex-wrap: wrap !important;     /* Biar kalau di HP otomatis turun */
     justify-content: center !important; 
-    gap: 30px !important;           /* Jarak antar kartu */
-    margin: 40px auto !important;   /* Jarak dari judul dan tombol */
+    gap: 25px !important; 
+    margin: 30px auto !important;
     max-width: 1200px !important;
 }
 
@@ -289,21 +289,17 @@ body {
 }
 
 .btn-container-center {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin-top: 20px !important;
-}
+    display: block !important;
+    margin-top: 30px !important;
 
 .btn-more {
-   display: inline-block !important;
-    background-color: #002855 !important;
-    color: white !important; /* Paksa putih biar gak ungu */
+    display: inline-block !important;
+    background-color: #002855 !important; /* Biru Calf */
+    color: white !important;             /* WAJIB: biar gak ungu */
     padding: 12px 35px !important;
     border-radius: 50px !important;
     text-decoration: none !important;
     font-weight: bold !important;
-    transition: 0.3s !important;
 }
 
 .btn-more:hover {
