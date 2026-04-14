@@ -210,9 +210,8 @@ body {
 
 /* Menu Section */
 .menu-section {
-    display: block !important; 
-    text-align: center !important; /* Biar judul & tombol otomatis ke tengah */
-    padding: 50px 20px !important;
+    padding: 100px 20px 50px; /* Tambah padding atas biar gak ketutup navbar */
+    text-align: center;
 }
 
 .section-title {
@@ -223,21 +222,24 @@ body {
 }
 
 .menu-container {
-    display: flex !important;
-    flex-direction: row !important; /* Paksa kartu sejajar horizontal */
-    flex-wrap: wrap !important;     /* Biar kalau di HP otomatis turun */
-    justify-content: center !important; 
-    gap: 25px !important; 
-    margin: 30px auto !important;
-    max-width: 1200px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .menu-card {
-    flex: 1 1 300px !important;    /* Kasih lebar minimal 300px */
-    max-width: 350px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    transition:0.3s;
+    flex: 0 1 300px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+    position: relative;
 }
 
     .menu-card h3 {
@@ -258,19 +260,11 @@ body {
 }
 
 .menu-card img {
-    width: 100% !important;
-    /* Ini perintah wajib buat bikin kotak sempurna */
-    aspect-ratio: 1 / 1 !important; 
-    
-    /* Biar gambarnya gak gepeng/ketarik */
-    object-fit: cover !important; 
-    object-position: center !important;
-
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 12px;
     margin-bottom: 15px;
-    
-    /* Tambahan buat jaga-jaga kalau browser jadul */
-    height: auto;
 }
 
 .badge {
@@ -288,37 +282,39 @@ body {
 }
 
 .btn-container-center {
-    display: block !important;
-    margin-top: 30px !important;
+    display: block;
+    margin: 40px auto;
+    width: 100%;
 
 .btn-more {
-    display: inline-block !important;
-    background-color: #002855 !important; /* Biru Calf */
-    color: white !important;             /* WAJIB: biar gak ungu */
-    padding: 12px 35px !important;
-    border-radius: 50px !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
+    display: inline-block;
+    background-color: #002855 !important;
+    color: white !important;
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn-more:hover {
-    background-color: #004080;
+    background-color: #004080 !important;
     transform: scale(1.05);
 }
 
 
 /* Info Section */
 .info-section {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    padding: 40px 20px !important;
+    background: white;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .info-content {
-    text-align: left !important;
-    max-width: 800px !important;
-    width: 100% !important;
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
 }
 
 .info-box h3 {
