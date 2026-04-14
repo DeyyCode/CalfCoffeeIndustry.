@@ -235,6 +235,7 @@ body {
     flex-direction: column;
     width: 100%; /* Pastiin lebarnya menuhin container */
     box-sizing: border-box;
+    transition: 0,3s;
 }
 
     .menu-card h3 {
@@ -287,68 +288,75 @@ body {
 
 .btn-container-center {
     display: flex;
-    justify-content: center; /* Naruh button ke tengah horizontal */
-    align-items: center;
+    justify-content: center; /* Paksa ke tengah horizontal */
     width: 100%;
-    margin-top: 30px; /* Kasih jarak dari kartu menu di atasnya */
-    padding-bottom: 40px;
+    margin: 40px 0;
 }
 
 .btn-more {
     display: inline-block;
-    padding: 12px 30px;
-    background-color: #0019FF; /* Biru khas logo Calf */
-    color: #ffffff;
+    background-color: #002855; /* Warna biru Calf */
+    color: white !important; /* Paksa warna putih */
+    padding: 12px 35px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
-    border-radius: 50px; /* Bikin lonjong biar modern */
+    font-size: 14px;
     transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 25, 255, 0.2);
 }
 
 .btn-more:hover {
-    background-color: #2D1B14; /* Berubah jadi coklat saat di-hover */
-    transform: scale(1.05); /* Sedikit membesar */
+    background-color: #004080;
+    transform: scale(1.05);
 }
 
 
 /* Info Section */
 .info-section {
-    padding: 100px 8%;
-    background: transparent;
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Kasih warna background beda dikit biar kontras */
+    display: flex;
+    justify-content: center;
 }
 
-.info-box {
-    border-left: 5px solid #000;
-    padding-left: 30px;
+.info-content {
+    max-width: 1200px;
+    width: 100%;
 }
 
 .info-box h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
 }
 
+.info-box p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Fasilitas biar gak cuma tulisan polos */
 .facilities {
-    margin-top: 20px;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 .facilities span {
     background: #eee;
-    padding: 8px 15px;
-    font-size: 0.8rem;
-    border-radius: 50px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #555;
 }
 
 footer {
-    text-align: center;
-    padding: 40px;
-    background: #1a1a1a;
-    color: #555;
-    font-size: 0.8rem;
+    padding: 20px;
+    text-align: left; /* Atau center sesuai selera */
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #888;
 }
 
 
