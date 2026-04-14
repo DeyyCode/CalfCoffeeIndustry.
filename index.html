@@ -304,52 +304,60 @@ body {
 
 
 /* Info Section */
+/* Section Info Jadi Lebih Mewah */
 .info-section {
-    background: white;
-    padding: 60px 20px;
+    background: #1a1a1a !important; /* Ganti jadi gelap biar kontras sama menu */
+    color: white !important;
+    padding: 80px 8%;
     display: flex;
     justify-content: center;
 }
 
 .info-content {
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
-    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Bagi dua: Teks kiri, Detail kanan */
+    gap: 40px;
+    align-items: center;
 }
 
 .info-box h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #1a1a1a;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #d4a373; /* Warna krem emas */
+    font-weight: 800;
 }
 
 .info-box p {
-    margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Fasilitas biar gak cuma tulisan polos */
+/* Fasilitas dibikin kayak tombol kecil */
 .facilities {
     display: flex;
-    gap: 15px;
-    margin-top: 15px;
+    gap: 12px;
+    margin-top: 25px;
 }
 
 .facilities span {
-    background: #eee;
-    padding: 5px 15px;
-    border-radius: 20px;
+    background: rgba(212, 163, 115, 0.2);
+    border: 1px solid #d4a373;
+    padding: 8px 20px;
+    border-radius: 50px;
     font-size: 0.85rem;
-    color: #555;
+    color: #d4a373;
 }
 
+/* Footer biar clean */
 footer {
-    padding: 20px;
-    text-align: left; /* Atau center sesuai selera */
-    border-top: 1px solid #ddd;
-    margin-top: 40px;
-    font-size: 13px;
-    color: #888;
+    background: #1a1a1a;
+    padding: 30px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #666;
+    font-size: 12px;
 }
 
 
