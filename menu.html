@@ -40,7 +40,7 @@
         
             <div class="menu-list-side" style="flex: 2;">
 
-        <div class="menu-header-row">
+        <div class="menu-header-row" >
             <h2 class="category-header">ORIGINAL</h2>
             <div class="price-labels">
                 <span>Cup</span><span>Can</span><span>Liter</span>
@@ -125,7 +125,7 @@
 
                 <div class="menu-item-row">
                     <div class="item-info">
-                        <h3>NON ADDITIONAL</h3>
+                        <h2>NON ADDITIONAL</h2>
                     </div>
                 </div>
 
@@ -1312,7 +1312,13 @@ width: 60px;
     /* Styling khusus untuk layar HP (lebar di bawah 768px) */
 @media screen and (max-width: 768px) {
     /* 1. Header & Nav Atas: Biar gak numpuk */
-   
+
+    .price-labels span, 
+    .item-prices span {
+        width: 35px; /* Lebih kecil lagi buat layar sempit */
+        font-size: 12px;
+    }
+    
     html, body {
         overflow-x: hidden !important;
         position: relative;
@@ -1386,6 +1392,10 @@ width: 60px;
         box-sizing: border-box !important;
     }
 
+    .menu-main-container:has(#original) {
+        padding-top: 70px !important; /* Sesuaikan jaraknya di sini */
+    }
+    
     .menu-list-side {
         order: 1 !important; /* List harga jadi nomor 2 */
         width: 100% !important;
