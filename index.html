@@ -228,13 +228,28 @@ body {
 }
 
 .menu-card {
-    background: transparent;
-    padding: 20px;
-    position: relative;
-    border-radius: 4px;
-    transition: 0.4s;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Biar badge 'Best Seller' bisa nempel */
+    overflow: hidden;
 }
 
+    .menu-card h3 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+    
 .menu-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -243,19 +258,25 @@ body {
 .menu-card img {
     width: 100%;
     height: 250px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .badge {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    background: #000;
+    top: 10px;
+    left: 10px;
+    background-color: #000;
     color: #fff;
-    padding: 5px 15px;
-    font-size: 0.7rem;
+    padding: 5px 12px;
+    font-size: 10px;
     text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 2;
 }
 
 .btn-container-center {
